@@ -85,7 +85,7 @@ svg {
   position: absolute;
   width: 90%;
   left: 50%;
-  top: 5%;
+  top: 3em;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -366,6 +366,7 @@ svg {
   }
   .hero-title {
     width: 95%;
+    top: 2em;
   }
   .hero {
     width: 80%;
