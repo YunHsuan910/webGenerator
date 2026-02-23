@@ -756,14 +756,15 @@ $content-a-margin-size: 5em;
     flex-direction: column;
     align-items: center;
     .title {
-      width: 100%;
+      width: 99%;
       color: $content-a-text-color;
       margin: 0.1em 0;
       //有全形標點符號時需要校正再開啟padding-left
       padding-left: 1em;
       font-size: clamp(2em, 3vw, 3em);
       text-align: center;
-      word-break: keep-all;
+      word-wrap: break-word;
+      word-break: break-all;
     }
     .sub-title {
       width: 100%;
