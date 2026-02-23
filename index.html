@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <!-- css reset -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- driver.js -->
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.js.iife.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@latest/dist/driver.css"/>
+    <title>網頁產生器</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero"><img src="assets/hero.webp" alt="" /></div>
+      <div class="components-wrap">
+        <div id="tabs-wrap" class="tabs-wrap">
+          <button class="tab-btn active" onclick="switchTabs('header')">
+            Header
+          </button>
+          <button class="tab-btn" onclick="switchTabs('content')">
+            Content
+          </button>
+          <button class="tab-btn" onclick="switchTabs('footer')">Footer</button>
+        </div>
+
+        <div id="add-btn-wrap" class="add-btn-wrap">
+          <div
+            id="header-options"
+            class="options-grid category-content active"
+          ></div>
+          <div id="content-options" class="options-grid category-content"></div>
+          <div id="footer-options" class="options-grid category-content"></div>
+        </div>
+      </div>
+      <div
+        id="show-preview-btn"
+        class="show-preview-btn"
+        onclick="showPreview()"
+      >
+        <span>即時預覽區</span>
+        <div class="arrow">
+          <img src="assets/arrow.png" alt="" />
+        </div>
+      </div>
+      <div id="preview" class="preview-wrap">
+        <div
+          id="close-preview-btn"
+          class="close-preview-btn"
+          onclick="closePreview()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 329 329"
+          >
+            <path
+              d="M194.64,164.77L322.75,36.66c8.34-8.33,8.34-21.81,0-30.14-8.33-8.33-21.81-8.33-30.14,0l-128.11,128.11L36.39,6.52C28.06-1.81,14.59-1.81,6.25,6.52c-8.34,8.33-8.34,21.81,0,30.14l128.11,128.11L6.25,292.88c-8.34,8.33-8.34,21.81,0,30.14,4.15,4.16,9.61,6.24,15.07,6.24s10.91-2.09,15.07-6.24l128.11-128.11,128.11,128.11c4.16,4.16,9.61,6.24,15.07,6.24s10.91-2.09,15.07-6.24c8.34-8.33,8.34-21.81,0-30.14l-128.11-128.11Z"
+            />
+          </svg>
+        </div>
+        <div id="toolbar" class="toolbar">
+          <button class="tab-btn active" onclick="changeView('desktop')">
+            電腦版
+          </button>
+          <button class="tab-btn" onclick="changeView('tablet')">平板版</button>
+          <button class="tab-btn" onclick="changeView('mobile')">手機版</button>
+        </div>
+        <div class="iframe-wrap">
+          <iframe
+            id="preview-iframe"
+            class="preview-iframe"
+            frameborder="0"
+            scrolling="auto"
+          ></iframe>
+          <button class="render-btn" id="render" onclick="exportCode()">
+            一鍵下載
+          </button>
+        </div>
+      </div>
+      <div id="help-btn" class="help-btn">?</div>
+    </div>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- Swiper JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script> -->
+    <!-- component JS -->
+    <!-- <script type="text/javascript" src="js/components/header-a.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/header-b.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/header-c.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/content-b.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/content-c.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/footer-a.js"></script> -->
+    <!-- <script type="text/javascript" src="js/components/footer-b.js"></script> -->
+    <!-- js -->
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

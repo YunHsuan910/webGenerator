@@ -1,0 +1,84 @@
+.component-wrapper {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.component-wrapper .del-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 5em;
+  padding: 0.2em;
+  display: none;
+  border: none;
+  border-radius: 0.3em;
+  background-color: #ff8c69;
+  color: #fff7e5;
+  z-index: 50;
+}
+
+.component-wrapper:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-animation: maskShow 0.1s linear;
+          animation: maskShow 0.1s linear;
+  z-index: 30;
+}
+
+.component-wrapper:hover .del-item {
+  display: block;
+  cursor: pointer;
+  -webkit-animation: delBtnShow 0.1s linear;
+          animation: delBtnShow 0.1s linear;
+}
+
+@-webkit-keyframes maskShow {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes maskShow {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes delBtnShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delBtnShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=preview.css.map */

@@ -1,0 +1,55 @@
+@import "variables";
+
+.component-wrapper {
+    position: relative;
+    transition: all 0.3s;
+    .del-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 5em;
+        padding: 0.2em;
+        display: none;
+        border: none;
+        border-radius: 0.3em;
+        background-color: $button-color;
+        color: $secondary-color;
+        z-index: 50;
+    }
+    &:hover {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($color: #000, $alpha: 0.5);
+            transform-origin: 50% 0;
+            animation: maskShow 0.1s linear;
+            z-index: 30;
+        }
+        .del-item {
+            display: block;
+            cursor: pointer;
+            animation: delBtnShow 0.1s linear;
+        }
+    }
+}
+@keyframes maskShow {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes delBtnShow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
