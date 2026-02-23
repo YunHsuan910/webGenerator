@@ -473,7 +473,9 @@ $(document).ready(function () {
 
   //若使用者第一次進入網頁則顯示引導
   if (!localStorage.getItem("guide_seen")) {
-    startUserGuide();
+    setTimeout(() => {
+      startUserGuide();
+    }, 500);
     localStorage.setItem("guide_seen", "true");
   }
   help();
