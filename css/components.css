@@ -990,7 +990,6 @@ button {
   width: 99%;
   color: #000;
   margin: 0.1em 0;
-  padding-left: 1em;
   font-size: clamp(2em, 3vw, 3em);
   text-align: center;
   word-wrap: break-word;
