@@ -69,6 +69,7 @@ svg {
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1440px;
   background: url(../assets/bg.png) no-repeat 0 1em;
@@ -78,6 +79,15 @@ svg {
 .container * {
   position: relative;
   color: #fff7e5;
+}
+
+.hero-title {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  top: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .hero {
@@ -353,6 +363,9 @@ svg {
   .container {
     background-position: 50% 3em;
     background-size: 120%;
+  }
+  .hero-title {
+    width: 95%;
   }
   .hero {
     width: 80%;

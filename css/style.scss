@@ -52,6 +52,7 @@ svg {
     fill: $secondary-color;
 }
 .container {
+    position: relative;
     width: 100%;
     max-width: 1440px;
     background: url(../assets/bg.png) no-repeat 0 1em;
@@ -60,6 +61,13 @@ svg {
         position: relative;
         color: $secondary-color;
     }
+}
+.hero-title {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
 }
 .hero {
     width: 50%;
@@ -253,6 +261,9 @@ svg {
     .container {
         background-position: 50% 3em;
         background-size: 120%;
+    }
+    .hero-title {
+        width: 95%;
     }
     .hero {
         width: 80%;
