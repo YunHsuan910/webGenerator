@@ -22,6 +22,11 @@ body {
   color: #333;
 }
 
+body * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .body-mask {
   height: 100%;
   overflow-y: hidden;
@@ -29,7 +34,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 }
 
@@ -342,5 +347,41 @@ svg {
 
 .help-btn:hover {
   background-color: #cb4a23;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-position: 50% 3em;
+    background-size: 120%;
+  }
+  .hero {
+    width: 80%;
+  }
+  .components-wrap {
+    margin-top: -5.5%;
+  }
+  .tabs-wrap {
+    width: 100%;
+    gap: 0.5em;
+    padding: 0.5em 0.5em 0;
+    border-radius: 1em 1em 0 0;
+  }
+  .tabs-wrap .tab-btn {
+    border-radius: 1em;
+  }
+  .preview-wrap .toolbar {
+    width: 100%;
+    gap: 0.5em;
+    padding: 0.5em 0.5em 0;
+    border-radius: 1em 1em 0 0;
+    margin: 3em auto 0;
+  }
+  .preview-wrap .toolbar .tab-btn {
+    border-radius: 1em;
+  }
+  .help-btn {
+    width: 3em;
+    height: 3em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
